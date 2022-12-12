@@ -1,6 +1,18 @@
 function getPin() {
-    const pin = Math.round(Math.random() * 1000);
-    console.log(pin);
+    const pin = Math.round(Math.random() * 10000);
+    const pinString = pin + "";
+    if (pinString.length == 4) {
+        return pin;
+    } else {
+        console.log(
+            `Got less than 4 num and return getPin function. The pin is ${pin}`
+        );
+        return getPin();
+    }
+}
+function generatePin() {
+    const pin = getPin();
+    document.getElementById("display-pin").value = pin;
 }
 
-getPin();
+// left section done

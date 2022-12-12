@@ -42,4 +42,5 @@ function verifyPin() {
         document.getElementById("notify-fail").style.display = "block";
         document.getElementById("notify-success").style.display = "none";
     }
+    document.getElementById("typed-numbers").value = "";
 }

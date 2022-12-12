@@ -31,3 +31,15 @@ document.getElementById("key-pad").addEventListener("click", function (e) {
     }
 });
 // input taking complete
+
+function verifyPin() {
+    const pin = document.getElementById("display-pin");
+    const typedNumbers = document.getElementById("typed-numbers");
+    if (pin != typedNumbers) {
+        document.getElementById("notify-fail").style.display = "none";
+        document.getElementById("notify-success").style.display = "block";
+    } else {
+        document.getElementById("notify-fail").style.display = "block";
+        document.getElementById("notify-success").style.display = "none";
+    }
+}

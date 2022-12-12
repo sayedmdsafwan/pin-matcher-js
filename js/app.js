@@ -16,3 +16,18 @@ function generatePin() {
 }
 
 // left section done
+
+document.getElementById("key-pad").addEventListener("click", function (e) {
+    const number = e.target.innerText;
+    const calcInput = document.getElementById("typed-numbers");
+    if (isNaN(number)) {
+        if (number == "C") {
+            calcInput.value = "";
+        }
+    } else {
+        const prevNum = calcInput.value;
+        const newNum = prevNum + number;
+        calcInput.value = newNum;
+    }
+});
+// input taking complete
